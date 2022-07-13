@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function (d) {
+      var config = {
+          kitId: 'evn1wfa',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <title>Kazuya Murayama Portfolio</title>
+</head>
+
+<body>
+  <canvas id="c"></canvas>
+  <header>
+    <div class="sidebar">
+      <h1 class="logo">
+        <img src="./img/nameLogo.png" alt="logo">
+      </h1>
+      <nav class="sidebar-menu">
+        <ul class="menu-list">
+          <li class="menu"><a href="#">Work</a></li>
+          <li class="menu"><a href="#">About</a></li>
+          <li class="menu"><a href="#">Contact</a></li>
+          <li class="menu"><a>SNS</a></li>
+          <ul class="sns">
+            <li class="icon"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="icon"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          </ul>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="shibuya">
+      <h2 class="title">Work</h2>
+      <h3 class="city-icon twitter"><a href="#"><i class="fab fa-twitter"></i>twitter</a></h3>
+      <h3 class="city-icon instagram"><a href="#"><i class="fab fa-instagram"></i>Instagram</a></h3>
+      <h3 class="city-icon facebook"><a href="#"><i class="fab fa-facebook"></i>facebook</a></h3>
+      <h2 class="about">about</h2>
+      <h2 class="contact">contact</h2>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+<script src="./JS/background.js"></script>
+
+</html>

@@ -1,0 +1,261 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
+
+/*base*/
+
+:root {
+  --text-blue: #c2f6f7;
+  --neon-blue: #43A4D6;
+  --neon-sidebar: #00FF33;
+  --text-sidebar: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-family: 'Train One';
+}
+
+
+
+a {
+  color: #000;
+}
+
+
+/*header*/
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+canvas {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 20%;
+  margin: 10px 10px 10px 0;
+  background-color: rgba(27, 29, 36, 0.15);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: rgba(14, 14, 14, 0.19) 0px 6px 15px 0px;
+  border-radius: 25px;
+  color: rgba(128, 128, 128, 0.6);
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+  text-align: right;
+  margin: 110% auto 0;
+
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.sidebar-menu {
+  margin: 0 auto;
+
+  .menu-list {
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+
+
+    .menu {
+      font-size: 30px;
+      text-transform: uppercase;
+      animation: flicker 1.5s infinite alternate;
+
+      a {
+        color: #fff;
+      }
+
+    }
+
+    @keyframes flicker {
+
+      0%,
+      18%,
+      22%,
+      25%,
+      53%,
+      57%,
+      100% {
+        text-shadow:
+          0 0 4px var(--text-sidebar),
+          0 0 11px var(--text-sidebar),
+          0 0 19px var(--text-sidebar),
+          0 0 40px var(--neon-sidebar),
+          0 0 80px var(--neon-sidebar),
+          0 0 90px var(--neon-sidebar),
+          0 0 100px var(--neon-sidebar),
+          0 0 150px var(--neon-sidebar);
+      }
+
+      20%,
+      24%,
+      55% {
+        text-shadow: none;
+      }
+    }
+
+    .sns {
+      display: flex;
+      font-size: 2rem;
+      gap: 20px;
+      justify-content: center;
+      margin-top: -30px;
+
+      .icon {
+        animation: flicker 1.5s infinite alternate;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/*main*/
+main {
+  background-color: #060C1E;
+
+  .shibuya {
+    background-image: url(../img/スクランブル交差点.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    margin-left: 200px;
+
+    .title {
+      color: var(--text-blue);
+      text-transform: uppercase;
+      font-family: ab-kirigirisu, sans-serif;
+      z-index: 10;
+      font-size: 4rem;
+      position: absolute;
+      top: 27%;
+      right: 7.8%;
+      transform: perspective(200px) rotateY(-34deg) rotateZ(-27deg) rotateX(14deg);
+      text-shadow: 0 15px 5px #000;
+      animation: flicker-blue 3s infinite alternate;
+      cursor: pointer;
+    }
+
+    .city-icon {
+      color: var(--text-blue);
+      text-transform: uppercase;
+      font-family: ab-kirigirisu, sans-serif;
+      z-index: 10;
+      font-size: 0.8rem;
+      position: absolute;
+      transform: perspective(200px) rotateY(-20deg) rotateZ(-8deg) rotateX(10deg);
+      text-shadow: 0 15px 5px #000;
+      animation: flicker-blue 3s infinite alternate;
+      cursor: pointer;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .twitter {
+      top: 42%;
+      right: 41.4%;
+    }
+
+    .instagram {
+      top: 40%;
+      right: 40.5%;
+    }
+
+    .facebook {
+      top: 38%;
+      right: 41.4%;
+    }
+
+    .about {
+      color: var(--text-blue);
+      text-transform: uppercase;
+      font-family: ab-kirigirisu, sans-serif;
+      z-index: 10;
+      font-size: 2rem;
+      position: absolute;
+      transform: perspective(200px) rotateY(-10deg) rotateZ(-6deg) rotateX(0deg);
+      text-shadow: 0 15px 5px #000;
+      animation: flicker-blue 3s infinite alternate;
+      cursor: pointer;
+      top: 35%;
+      right: 30%;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+
+    .contact {
+      color: var(--text-blue);
+      text-transform: uppercase;
+      font-family: ab-kirigirisu, sans-serif;
+      z-index: 10;
+      font-size: 0.8rem;
+      position: absolute;
+      transform: perspective(200px) rotateY(-5deg) rotateZ(2deg) rotateX(0deg);
+      text-shadow: 0 15px 5px #000;
+      animation: flicker-blue 3s infinite alternate;
+      cursor: pointer;
+      top: 58.3%;
+      right: 76%;
+      height: 60px;
+      line-height: 60px;
+      padding: 0 5px;
+      border: solid 1px var(--text-blue);
+    }
+
+    @keyframes flicker-blue {
+
+      0%,
+      22%,
+      28%,
+      36%,
+      53%,
+      57%,
+      100% {
+        text-shadow:
+          0 0 1px var(--text-blue), 0 0 3px var(--text-blue), 0px 0px 6px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 50px var(--neon-blue), 0 0 70px var(--neon-blue), 0 0 100px var(--neon-blue), 0 0 150px var(--neon-blue), 0 0 200px var(--neon-blue)
+      }
+
+      23%,
+      29%,
+      56% {
+        text-shadow: none;
+      }
+    }
+  }
+}
