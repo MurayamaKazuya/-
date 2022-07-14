@@ -144,6 +144,7 @@ canvas {
 /*main*/
 main {
   background-color: #060C1E;
+  overflow-x: hidden;
 
   .shibuya {
     background-image: url(../img/スクランブル交差点.jpg);
