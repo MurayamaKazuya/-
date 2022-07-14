@@ -163,7 +163,7 @@ main {
       font-size: 4rem;
       position: absolute;
       top: 27%;
-      right: 7.8%;
+      right: calc(28.8% - 200px);
       transform: perspective(200px) rotateY(-34deg) rotateZ(-27deg) rotateX(14deg);
       text-shadow: 0 15px 5px #000;
       animation: flicker-blue 3s infinite alternate;
