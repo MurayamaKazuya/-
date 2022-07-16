@@ -128,21 +128,22 @@ main .shibuya {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50%;
-  height: 100vh;
+  height: calc((100vw - 200px) / 0.75);
   z-index: 1;
   position: relative;
   margin-left: 200px;
+  font-size: calc(100vw - 200px);
 }
 main .shibuya .title {
   color: var(--text-blue);
   text-transform: uppercase;
   font-family: ab-kirigirisu, sans-serif;
   z-index: 10;
-  font-size: 4rem;
+  font-size: 0.1em;
   position: absolute;
-  top: 27%;
-  right: calc(28.8% - 200px);
-  transform: perspective(200px) rotateY(-34deg) rotateZ(-27deg) rotateX(14deg);
+  top: 21.5%;
+  left: 76.5%;
+  transform: perspective(200px) rotateY(-21.5deg) rotateZ(-24deg) rotateX(12deg) translate(-50%, -50%);
   text-shadow: 0 15px 5px #000;
   -webkit-animation: flicker-blue 3s infinite alternate;
           animation: flicker-blue 3s infinite alternate;
@@ -153,9 +154,9 @@ main .shibuya .city-icon {
   text-transform: uppercase;
   font-family: ab-kirigirisu, sans-serif;
   z-index: 10;
-  font-size: 0.8rem;
+  font-size: 0.015em;
   position: absolute;
-  transform: perspective(200px) rotateY(-20deg) rotateZ(-8deg) rotateX(10deg);
+  transform: perspective(200px) rotateY(-20deg) rotateZ(-8deg) rotateX(10deg) translate(-50%, -50%);
   text-shadow: 0 15px 5px #000;
   -webkit-animation: flicker-blue 3s infinite alternate;
           animation: flicker-blue 3s infinite alternate;
@@ -166,48 +167,49 @@ main .shibuya .city-icon a {
 }
 main .shibuya .twitter {
   top: 42%;
-  right: 41.4%;
+  left: 53.1%;
 }
 main .shibuya .instagram {
-  top: 40%;
-  right: 40.5%;
+  top: 39.8%;
+  left: 52.7%;
 }
 main .shibuya .facebook {
   top: 38%;
-  right: 41.4%;
+  left: 52.6%;
 }
 main .shibuya .about {
   color: var(--text-blue);
   text-transform: uppercase;
   font-family: ab-kirigirisu, sans-serif;
   z-index: 10;
-  font-size: 2rem;
+  font-size: 0.04em;
   position: absolute;
-  transform: perspective(200px) rotateY(-10deg) rotateZ(-6deg) rotateX(0deg);
+  transform: perspective(200px) rotateY(-8deg) rotateZ(-6deg) rotateX(0deg) translate(-50%, -50%);
   text-shadow: 0 15px 5px #000;
   -webkit-animation: flicker-blue 3s infinite alternate;
           animation: flicker-blue 3s infinite alternate;
   cursor: pointer;
-  top: 35%;
-  right: 30%;
+  top: 39%;
+  left: 69%;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   text-orientation: upright;
+  border: solid 0.1em var(--text-blue);
 }
 main .shibuya .contact {
   color: var(--text-blue);
   text-transform: uppercase;
   font-family: ab-kirigirisu, sans-serif;
   z-index: 10;
-  font-size: 0.8rem;
+  font-size: 0.013em;
   position: absolute;
-  transform: perspective(200px) rotateY(-5deg) rotateZ(2deg) rotateX(0deg);
+  transform: perspective(200px) rotateY(-5deg) rotateZ(2deg) rotateX(0deg) translate(-50%, -50%);
   text-shadow: 0 15px 5px #000;
   -webkit-animation: flicker-blue 3s infinite alternate;
           animation: flicker-blue 3s infinite alternate;
   cursor: pointer;
-  top: 58.3%;
-  right: 76%;
+  top: 60.9%;
+  left: 19%;
   height: 60px;
   line-height: 60px;
   padding: 0 5px;
